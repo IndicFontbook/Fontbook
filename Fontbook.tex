@@ -1,0 +1,183 @@
+\documentclass[12pt,twoside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+
+\usepackage{fontbook}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\Huge \textbf{Open Font Format Specification
+for
+Scripts of India} \\ \huge Elaborate, Illustrated font development guideline document for scripts of India by font designers, developers, language experts. }
+
+\author{Author: FirstName LastName\thanks{\url{www.example.com}}}
+
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add a dedication paragraph to dedicate your book to someone %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{dedication}
+Dedicated to all font designers
+\end{dedication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+%%%%%%%%%%%
+% Preface %
+%%%%%%%%%%%
+\chapter{Introduction}
+
+\begin{chapquote}{Author's name, \textit{Source of this quote}}
+``This is a quote and I don't know who said this.''
+\end{chapquote}
+
+\section{Need for document}
+
+In present era if we simply do the comparison between availability of Latin and Indian fonts one can easily observe so much different. only handful fonts available for Indian language compare to thousands or even more fonts and style available for Latin script.
+
+\section{Objectives of document}
+
+\section{Target Audience for this document}
+
+\section{Scope}
+\begin{itemize}
+\item This document covers only languages and scripts recognized in India.
+\item This document covers all complex OFF feature required for Indian scripts.
+\item This document is based on the current expertise of community members working/worked on this area.
+\item This document is from the typography perspective for each script and many not be linguistically correct.
+\item This document does not cover design or calligraphy style aspects but covers only technical aspects.
+\item This document is based on Unicode 6.2 and ISO/IEC 14496-22:2009 (Second Edition) "Open Font Format" standard.
+\item This document is not a tutorial on font design or development and does not teach typography.
+\end{itemize}
+
+\section{How to use this document}
+
+Elaborate, Illustrated font design guideline document for Indic fonts by font designers, developers, language experts.
+- designer freedom to adapt
+
+\section{Notes on Collaboration}
+
+\chapter{General Concepts} 
+
+\section{Complex script }
+
+[What is a complex script? What makes it complex, some examples, screenshots]
+2-3 paragraph + images
+How it differs from simple scripts like Latin
+Character
+
+\section{Glyph }
+
+\section{Ligatures }
+
+What is a Ligature, example, image
+How to identify a ligature
+Virama
+
+AKA - Pulli, Chandarakkala, Vattu, Halant
+
+\section{Cluster/Syllable }
+
+
+\section{Akhand }
+
+\section{Ra Forms }
+
+	Explain Reph
+Explain Rakar
+\subsection*{Matra}
+
+[explain prebase, postbase matra with examples and images]
+\section{Split Matra }
+
+\section{Reordering }
+
+\section{Zero Widh Joiner }
+
+\section{Zero Width Non Joiner }
+
+
+\section{Stacking }
+
+\chapter{Open font format}
+
+\section{Introduction}
+
+\section{GPOS}
+
+\section{GSUB}
+
+\section{GDEF}
+
+\section{Shaping Engine}
+
+[Some conent from http://behdad.org/text/ can be used ]
+\section{Shape Glyph sequence}
+
+\section{Position Glyph sequence}
+
+\section{Reference fonts}
+
+To illustrate the concepts in this document, we will be using a set of reference fonts for each script, some times more than one per script. 
+List of fonts table
+
+\section{Reference Rendering Engine}
+
+We are using Harfbuzz as  a reference rendering engine. Examples given are working perfectly with Harfbuzz but any rendering engine conforms to the Open font specification will give same result.
+
+
+\chapter{Devanagari}
+\chapter{Tamil}
+
+\chapter{Kannada}
+
+\chapter{Panjabi}
+
+\chapter{Telugu}
+
+\chapter{Gujarati}
+
+\chapter{Odiya}
+
+\chapter{Malayalam}
+\input{malayalam.tex}
+
+
+\chapter{Glossary}
+
+
+\chapter{References}
+
+
+State of Text Rendering By Behdad Esfahbod <behdad behdad com>   http://behdad.org/text/ 
+
+
+\chapter{Appendices}
+
+[Editor notes]
+
+\end{document}

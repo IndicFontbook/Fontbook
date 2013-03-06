@@ -1,0 +1,53 @@
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\RequirePackage{fontspec}
+
+% Malayalam styles
+%
+% Define some fonts
+%
+\def\meera{\fontspec[Script=Malayalam]{Meera}}
+\def\rachana{\fontspec[Script=Malayalam]{Rachana}}
+
+
+%
+% Set the default fonts options
+%
+\DeclareOption{rachana}{%
+\setmainfont[Script=Malayalam]{Rachana}
+}
+
+\DeclareOption{meera}{%
+\setmainfont[Script=Malayalam]{Meera}
+}
+
+%
+%
+\ProcessOptions\relax
+
+\endinput
