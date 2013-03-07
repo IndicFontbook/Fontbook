@@ -1,45 +1,62 @@
-\documentclass[12pt,twoside]{book}
+\documentclass[11.5pt,twoside]{book}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[colorlinks=false, pdfborder={0 0 0}, pdftitle={Open Font Format Specification for Scripts of India},
-  pdfauthor={Santhosh Thottingal}, pdfsubject={Open Font Format Specification}, pdfkeywords={Font, indic, open , scripts , india}]{hyperref}
-\usepackage{graphicx}
-\usepackage[english]{babel}
-
 \usepackage{fontbook}
 
 
+\usepackage[colorlinks=false, pdfborder={0 0 0}, pdftitle={Open Font Format Specification for Scripts of India},
+  pdfauthor={Santhosh Thottingal}, pdfsubject={Open Font Format Specification}, pdfkeywords={Font, indic, open , scripts , india}]{hyperref}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% First page of book which contains 'stuff' like: %
-%  - Book title, subtitle                         %
-%  - Book author name                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\title{\Huge \textbf{Open Font Format Specification
-for
-Scripts of India} \\ \huge Elaborate, Illustrated font development guideline document for scripts of India by font designers, developers, language experts. }
-
-\author{Author: FirstName LastName\thanks{\url{www.example.com}}}
-
+%---------------------------------------------------
 
 \begin{document}
+%% Set mininum characters on left and right for hyphenation
+\lefthyphenmin=3
+\righthyphenmin=5
+%\normalsize=11.5pt
 
+%-----------------------------Cover Page----------------------------------------
+
+%\includepdf{cover}
+
+%------------------------------Title Page --------------------------------------
+\begin{center}
+
+\vspace*{3 in}
+
+\HRule \\[0.4cm]
+{\huge \bfseries Open Font Format Specification for Scripts of India}
+\\
+{\small \bfseries Elaborate, Illustrated font development guideline document for scripts of India by font designers, developers, language experts.}
+\\
+\HRule \\[0.4cm]
+
+\emph{Author}\\
+Santhosh \textsc{Thottingal}
+
+
+\vfill
+
+{\large \today}
+
+\end{center}
+%------------------------------Dedication --------------------------------------
 \frontmatter
-\maketitle
+~
+\vfill
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Add a dedication paragraph to dedicate your book to someone %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{dedication}
-Dedicated to all font designers
-\end{dedication}
+%\centerline{{\dejavu ♡}Copyheart 2012. Copying is an act of love. Love is not subject to law. Please copy and share.}
+%\centerline{{\dejavu ♡}പകര്‍പ്പിഷ്ടം 2012.  ഇഷ്ടപ്പെടുന്നവരാണു് പകര്‍ത്തുന്നതു്. ഇഷ്ടത്തിനു് നിയമമില്ല. പകര്‍ത്തുവിന്‍ പങ്കുവെയ്ക്കുവിന്‍ }
+\begin{center}Dedicated to all font designers\end{center}
+
+
+\vfill
+~
+\newpage
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Auto-generated table of contents, list of figures and list of tables %
