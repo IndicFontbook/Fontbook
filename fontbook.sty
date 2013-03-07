@@ -31,26 +31,6 @@
 
 
 % Malayalam styles
-%
-% Define some fonts
-%
-\def\meera{\fontspec[Script=Malayalam]{Meera}}
-\def\rachana{\fontspec[Script=Malayalam]{Rachana}}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Set the default fonts options
-%
-%\DeclareOption{rachana}{%
-%\setmainfont[Script=Malayalam]{Rachana}
-%}
-%
-%\DeclareOption{meera}{%
-%\setmainfont[Script=Malayalam]{Meera}
-%}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Use Malayalam Hyphenation with Polyglossia
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
@@ -59,6 +39,9 @@
 \newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
 \newfontfamily\englishfont{URW Palladio L}
 
+
+\def\meera{\fontspec[Script=Malayalam]{Meera}}
+\def\rachana{\fontspec[Script=Malayalam]{Rachana}}
 
 
 \usepackage{framed}
