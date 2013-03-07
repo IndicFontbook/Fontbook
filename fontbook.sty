@@ -30,6 +30,10 @@
 \RequirePackage{fontspec}
 
 
+%--- Sections without numbering 
+\newcommand{\secstar}[1]{\thispagestyle{empty}\clearpage\phantomsection\section*{\addcontentsline{toc}{section}{#1}\centering #1}}
+
+
 % Malayalam styles
 % Use Malayalam Hyphenation with Polyglossia
 \usepackage{polyglossia}
@@ -44,6 +48,9 @@
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
 
 
+
+
+
 \usepackage{framed}
 \usepackage{url}
 \usepackage{graphicx}
@@ -54,5 +61,15 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \ProcessOptions\relax
+
+%% Define a new 'leo' style for the package that will use a smaller font.(urls)
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+
 
 \endinput
