@@ -1,48 +1,69 @@
-\documentclass[12pt,twoside]{book}
+\documentclass[11.5pt,twoside]{book}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage[english]{babel}
-
 \usepackage{fontbook}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% First page of book which contains 'stuff' like: %
-%  - Book title, subtitle                         %
-%  - Book author name                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{\Huge \textbf{Open Font Format Specification
-for
-Scripts of India} \\ \huge Elaborate, Illustrated font development guideline document for scripts of India by font designers, developers, language experts. }
+\usepackage[colorlinks=false, pdfborder={0 0 0}, pdftitle={Open Font Format Specification for Scripts of India},
+  pdfauthor={Santhosh Thottingal}, pdfsubject={Open Font Format Specification}, pdfkeywords={Font, indic, open , scripts , india}]{hyperref}
 
-\author{Author: FirstName LastName\thanks{\url{www.example.com}}}
-
+%---------------------------------------------------
 
 \begin{document}
+%% Set mininum characters on left and right for hyphenation
+\lefthyphenmin=3
+\righthyphenmin=5
+%\normalsize=11.5pt
 
+%-----------------------------Cover Page----------------------------------------
+
+%\includepdf{cover}
+
+%------------------------------Title Page --------------------------------------
+\begin{center}
+
+\vspace*{2 in}
+
+\HRule \\[0.4cm]
+{\huge \bfseries Open Font Format Specification for Scripts of India}
+\\
+{\small \bfseries Elaborate, Illustrated font development guideline document for scripts of India by font designers, developers, language experts.}
+\\
+\HRule \\[0.4cm]
+
+\emph{Author}\\
+Santhosh \textsc{Thottingal}
+
+
+\vfill
+
+{\large \today}
+
+\end{center}
+%------------------------------Dedication --------------------------------------
 \frontmatter
-\maketitle
+~
+\vfill
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Add a dedication paragraph to dedicate your book to someone %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{dedication}
-Dedicated to all font designers
-\end{dedication}
+%\centerline{{\dejavu ♡}Copyheart 2012. Copying is an act of love. Love is not subject to law. Please copy and share.}
+%\centerline{{\dejavu ♡}പകര്‍പ്പിഷ്ടം 2012.  ഇഷ്ടപ്പെടുന്നവരാണു് പകര്‍ത്തുന്നതു്. ഇഷ്ടത്തിനു് നിയമമില്ല. പകര്‍ത്തുവിന്‍ പങ്കുവെയ്ക്കുവിന്‍ }
+\begin{center}Dedicated to all font designers\end{center}
+
+
+\vfill
+~
+\newpage
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Auto-generated table of contents, list of figures and list of tables %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
-\listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 
 \mainmatter
 
@@ -55,15 +76,15 @@ Dedicated to all font designers
 ``This is a quote and I don't know who said this.''
 \end{chapquote}
 
-\section{Need for document}
+\secstar{Need for document}
 
 In present era if we simply do the comparison between availability of Latin and Indian fonts one can easily observe so much different. only handful fonts available for Indian language compare to thousands or even more fonts and style available for Latin script.
 
-\section{Objectives of document}
+\secstar{Objectives of document}
 
-\section{Target Audience for this document}
+\secstar{Target Audience for this document}
 
-\section{Scope}
+\secstar{Scope}
 \begin{itemize}
 \item This document covers only languages and scripts recognized in India.
 \item This document covers all complex OFF feature required for Indian scripts.
@@ -74,25 +95,25 @@ In present era if we simply do the comparison between availability of Latin and 
 \item This document is not a tutorial on font design or development and does not teach typography.
 \end{itemize}
 
-\section{How to use this document}
+\secstar{How to use this document}
 
 Elaborate, Illustrated font design guideline document for Indic fonts by font designers, developers, language experts.
 - designer freedom to adapt
 
-\section{Notes on Collaboration}
+\secstar{Notes on Collaboration}
 
 \chapter{General Concepts} 
 
-\section{Complex script }
+\secstar{Complex script }
 
 [What is a complex script? What makes it complex, some examples, screenshots]
 2-3 paragraph + images
 How it differs from simple scripts like Latin
 Character
 
-\section{Glyph }
+\secstar{Glyph }
 
-\section{Ligatures }
+\secstar{Ligatures }
 
 What is a Ligature, example, image
 How to identify a ligature
@@ -100,52 +121,52 @@ Virama
 
 AKA - Pulli, Chandarakkala, Vattu, Halant
 
-\section{Cluster/Syllable }
+\secstar{Cluster/Syllable }
 
 
-\section{Akhand }
+\secstar{Akhand }
 
-\section{Ra Forms }
+\secstar{Ra Forms }
 
 	Explain Reph
 Explain Rakar
 \subsection*{Matra}
 
 [explain prebase, postbase matra with examples and images]
-\section{Split Matra }
+\secstar{Split Matra }
 
-\section{Reordering }
+\secstar{Reordering }
 
-\section{Zero Widh Joiner }
+\secstar{Zero Widh Joiner }
 
-\section{Zero Width Non Joiner }
+\secstar{Zero Width Non Joiner }
 
 
-\section{Stacking }
+\secstar{Stacking }
 
 \chapter{Open font format}
 
-\section{Introduction}
+\secstar{Introduction}
 
-\section{GPOS}
+\secstar{GPOS}
 
-\section{GSUB}
+\secstar{GSUB}
 
-\section{GDEF}
+\secstar{GDEF}
 
-\section{Shaping Engine}
+\secstar{Shaping Engine}
 
 [Some conent from http://behdad.org/text/ can be used ]
-\section{Shape Glyph sequence}
+\secstar{Shape Glyph sequence}
 
-\section{Position Glyph sequence}
+\secstar{Position Glyph sequence}
 
-\section{Reference fonts}
+\secstar{Reference fonts}
 
 To illustrate the concepts in this document, we will be using a set of reference fonts for each script, some times more than one per script. 
 List of fonts table
 
-\section{Reference Rendering Engine}
+\secstar{Reference Rendering Engine}
 
 We are using Harfbuzz as  a reference rendering engine. Examples given are working perfectly with Harfbuzz but any rendering engine conforms to the Open font specification will give same result.
 

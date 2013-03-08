@@ -1,16 +1,18 @@
-\newenvironment{dedication}
-{
-   \cleardoublepage
-   \thispagestyle{empty}
-   \vspace*{\stretch{1}}
-   \hfill\begin{minipage}[t]{0.66\textwidth}
-   \raggedright
-}
-{
-   \end{minipage}
-   \vspace*{\stretch{3}}
-   \clearpage
-}
+\usepackage{pdfpages}
+\usepackage[
+  inner=2.4cm,
+  outer=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm,
+  paperwidth=15.5cm,
+  paperheight=22.5cm,
+  headheight=0.70cm]{geometry}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage[final]{microtype}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
 % Source: http://tex.stackexchange.com/a/53380 %
@@ -27,27 +29,47 @@
 
 \RequirePackage{fontspec}
 
+
+%--- Sections without numbering 
+\newcommand{\secstar}[1]{\thispagestyle{empty}\clearpage\phantomsection\section*{\addcontentsline{toc}{section}{#1}\centering #1}}
+
+
 % Malayalam styles
-%
-% Define some fonts
-%
+% Use Malayalam Hyphenation with Polyglossia
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{malayalam}
+\setmainfont[Script=Malayalam,HyphenChar="200C]{Rachana}
+\newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
+\newfontfamily\englishfont{URW Palladio L}
+
+
 \def\meera{\fontspec[Script=Malayalam]{Meera}}
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
 
 
-%
-% Set the default fonts options
-%
-\DeclareOption{rachana}{%
-\setmainfont[Script=Malayalam]{Rachana}
-}
 
-\DeclareOption{meera}{%
-\setmainfont[Script=Malayalam]{Meera}
-}
 
-%
-%
+
+\usepackage{framed}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{color}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \ProcessOptions\relax
+
+%% Define a new 'leo' style for the package that will use a smaller font.(urls)
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+
 
 \endinput
