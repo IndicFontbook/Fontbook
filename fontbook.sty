@@ -7,10 +7,29 @@
   paperwidth=15.5cm,
   paperheight=22.5cm,
   headheight=0.70cm]{geometry}
-\usepackage{xltxtra}
-\usepackage{fontspec}
+
+
 \usepackage{fancyhdr}
 \usepackage[final]{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{framed}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fontbook}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{polyglossia}
+
+% Use Malayalam Hyphenation with Polyglossia
+\setdefaultlanguage{english}
+\setotherlanguage{malayalam}
+\setmainfont[Script=Malayalam,HyphenChar="200C]{Rachana}
+\newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
+\newfontfamily\englishfont{URW Palladio L}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,28 +54,8 @@
 
 
 % Malayalam styles
-% Use Malayalam Hyphenation with Polyglossia
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-\setotherlanguage{malayalam}
-\setmainfont[Script=Malayalam,HyphenChar="200C]{Rachana}
-\newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
-\newfontfamily\englishfont{URW Palladio L}
-
-
 \def\meera{\fontspec[Script=Malayalam]{Meera}}
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
-
-
-
-
-
-\usepackage{framed}
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage{fancyhdr}
-\usepackage{color}
-
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
@@ -69,7 +68,5 @@
 \makeatother
 %% Now actually use the newly defined style.
 \urlstyle{leo}
-
-
 
 \endinput
