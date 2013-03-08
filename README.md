@@ -7,7 +7,13 @@ for scripts of India by font designers, developers, language experts.
 Building the book
 -----------------
 You need XeTeX to build this book. Install it on your operating system
-if not done already. Then build the book using:
+if not done already. 
+
+Required packages:
+* texlive-xetex
+* texlive-latex-extras
+
+Then build the book using:
 
 ```bash
 make
