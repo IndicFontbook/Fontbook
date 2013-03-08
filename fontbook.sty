@@ -10,10 +10,6 @@
 
 
 \usepackage{fancyhdr}
-\usepackage[final]{microtype}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
 \usepackage{framed}
 \usepackage{url}
 \usepackage{graphicx}
@@ -21,7 +17,6 @@
 \usepackage{fontbook}
 \usepackage{fontspec}
 \usepackage{xltxtra}
-\usepackage{polyglossia}
 \usepackage{polyglossia}
 
 % Use Malayalam Hyphenation with Polyglossia
@@ -31,26 +26,20 @@
 \newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
 \newfontfamily\englishfont{URW Palladio L}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter quote at the start of chapter        %
-% Source: http://tex.stackexchange.com/a/53380 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand{\@chapapp}{}% Not necessary...
-\newenvironment{chapquote}[2][2em]
-  {\setlength{\@tempdima}{#1}%
-   \def\chapquote@author{#2}%
-   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-   \itshape}
-  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-\makeatother
-
-\RequirePackage{fontspec}
-
-
 %--- Sections without numbering 
 \newcommand{\secstar}[1]{\thispagestyle{empty}\clearpage\phantomsection\section*{\addcontentsline{toc}{section}{#1}\centering #1}}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\filcenter}
+{\LARGE\thechapter}
+{1ex}
+{\titlerule[2pt]
+\vspace{2ex}%
+\LARGE}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
 
 
 % Malayalam styles
@@ -58,6 +47,13 @@
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \ProcessOptions\relax
 
