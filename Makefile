@@ -1,9 +1,14 @@
-all: Fontbook.pdf
+default: pdf
+all: pdf html
 
-Fontbook.pdf: Fontbook.tex *.tex *.sty
+pdf: Fontbook.pdf
+
+%.html:
+	latex2html Fontbook.tex
+
+%.pdf: Fontbook.tex *.tex *.sty
 	xelatex $<
 	xelatex $<	# to include generated ToC
-	evince Fontbook.pdf
 
 clean:
 	rm -f Fontbook.{pdf,aux,toc,log}
