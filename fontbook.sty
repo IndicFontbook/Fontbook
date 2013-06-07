@@ -26,7 +26,7 @@
 \newfontfamily\malayalamfonttt{Liberation Mono} %Suppress error with \url fixed width fonts
 \newfontfamily\englishfont{URW Palladio L}
 
-%--- Sections without numbering 
+%--- Sections without numbering
 \newcommand{\secstar}[1]{\thispagestyle{empty}\clearpage\phantomsection\section*{\addcontentsline{toc}{section}{#1}\centering #1}}
 
 \usepackage{titlesec}
@@ -40,11 +40,12 @@
 [\vspace{1ex}%
 {\titlerule[2pt]}]
 
-
-
+% Hindi/Devanagari styles
+% TODO: Add more language specific styles - mainly reference fonts
 % Malayalam styles
 \def\meera{\fontspec[Script=Malayalam]{Meera}}
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
+\def\lohitmalayalam{\fontspec[Script=Malayalam]{LohitMalayalam}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
