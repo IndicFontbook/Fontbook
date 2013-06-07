@@ -12,6 +12,7 @@ if not done already.
 Required packages:
 * texlive-xetex
 * texlive-latex-extras
+* latex2html
 
 Then build the book using:
 
