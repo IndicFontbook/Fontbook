@@ -11,4 +11,4 @@ pdf: Fontbook.pdf
 	xelatex $<	# to include generated ToC
 
 clean:
-	rm -f Fontbook.{pdf,aux,toc,log}
+	rm -f Fontbook.pdf Fontbook.aux Fontbook.toc Fontbook.log
