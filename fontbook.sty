@@ -19,6 +19,9 @@
 \usepackage{xltxtra}
 \usepackage{polyglossia}
 
+%image path
+\graphicspath{ {./Chapters/} }
+
 % Use Malayalam Hyphenation with Polyglossia
 \setdefaultlanguage{english}
 \setotherlanguage{malayalam}
@@ -43,11 +46,14 @@
 % Hindi/Devanagari styles
 % TODO: Add more language specific styles - mainly reference fonts
 % Malayalam styles
+\def\malayalam{\fontspec[Script=Malayalam]{Meera}}
 \def\meera{\fontspec[Script=Malayalam]{Meera}}
 \def\rachana{\fontspec[Script=Malayalam]{Rachana}}
 \def\lohitmalayalam{\fontspec[Script=Malayalam]{LohitMalayalam}}
-
+\def\hindi{\fontspec[Script=Devanagari]{Lohit Devanagari}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand\textexample{\@setfontsize\Huge{38}{47}} 
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -67,3 +73,5 @@
 \urlstyle{leo}
 
 \endinput
+
+
