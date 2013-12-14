@@ -1,7 +1,7 @@
 default: pdf
-all: pdf html
+all: clean pdf html
 
-pdf: Fontbook.pdf
+pdf: clean Fontbook.pdf
 
 %.html:
 	latex2html -html_version 4.0,latin1,unicode Fontbook.tex
