@@ -19,3 +19,8 @@ Then build the book using:
 ```bash
 make
 ```
+
+Contributing
+------------
+
+You need not know TeX to contibute!. You may contribute the content for this collaboratively edited document by any convenient method- eg: filing an issue here with content, mailing the content to santhosh dot thottingal at gmail dot com etc
