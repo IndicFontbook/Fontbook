@@ -52,17 +52,51 @@ been represented using special cluster graphemes where the vowel signs
 were fused beneath their consonants, but in the reformed orthography
 they are represented by spacing characters following their consonants.
 
-// FIXME: insert image here to illustrate both orthography
-variation. Refer chapter 9 of Unicode standard page 307 for a sample
-image
 
-\subsection {Quasi Vowel Consonants}
-In Malayalam some consonants like YA({\meera യ}), RA({\meera ര}) are
-quasi-vowels and they have post(pre)/below base forms. As per OT spec the
-pstf(pref) and blwf features are always applied and this leads to weird shaping
-when some consonants come as base. Eg. {\meera യ്ര, യ്ല, ര്ര, ല്ര}. This is more
-prominent in reformed scripts because one can do away with these forms in
-traditional scripts.
+\begin{figure}[h]
+   {\meera\large  മലയപ്പുലയനാ മാടത്തിൻമുറ്റത്തു\\
+മഴ വന്ന നാളൊരു വാഴ നട്ടു.\\
+മനതാരിലാശകൾപോലതിലോരോരോ \\
+മരതകക്കൂമ്പു പൊടിച്ചുവന്നു.\\
+അരുമക്കിടാങ്ങളിലൊന്നായതിനേയു -\\
+മഴകിപ്പുലക്കള്ളിയോമനിച്ചു.}
+   \caption{Text rendering using traditional orthography. Font used is Meera }
+\end{figure}
+
+\begin{figure}[h]
+   {\lohitmalayalam\large  മലയപ്പുലയനാ മാടത്തിൻമുറ്റത്തു\\
+മഴ വന്ന നാളൊരു വാഴ നട്ടു\\
+മനതാരിലാശകൾപോലതിലോരോരോ \\
+മരതകക്കൂമ്പു പൊടിച്ചുവന്നു\\
+അരുമക്കിടാങ്ങളിലൊന്നായതിനേയു\\
+മഴകിപ്പുലക്കള്ളിയോമനിച്ചു}
+   \caption{Text rendering using modern orthography. Font used is Lohit Malayalam}
+\end{figure}
+
+The above examples give high level difference in orthograhy. 
+Since both orthograhy is prominent in day to day usage of Malayalam, it will be helpful to get more
+understanding about the orthography variation. So let us go some more deep into this differences.
+
+For vowel signs, only u vowel({\meera ു}) and uu vowel({\meera ൂ})  make the difference. {\meera ു}
+\begin{figure}[h]
+   Traditional: \\{\textexample{ \meera ക + ു = കു  \\
+ക + ൂ = കൂ } }\\
+ Modern:\\ \textexample{ \raghumalayalam ക + ു = കു \\
+ക + ൂ = കൂ }\\
+   \caption{Rendering difference of u and uu vowel signs}
+\end{figure}
+
+As you can see, in traditional orthograhy the vowel sign attach to the consonant, while in modern script, the vowel sign is separate.
+
+Reph sign veries in both orthographies. Reph sign is formed by VIRAMA+ RA ie {\malayalam ് + ര}.
+\begin{figure}[h]
+Traditional:\\ {\meera\textexample  പ്ര }\\
+Modern: \\ {\lohitmalayalam\textexample  പ്ര }
+   \caption{Rendering difference of u and uu vowel signs}
+\end{figure}
+
+As you can see, in traditional orthograhy the reph sign attach to the consonant, while in modern script,reph sign is separate and it get re-ordered to the left of consonant.
+
 
 \secstar{Reference fonts}
 
