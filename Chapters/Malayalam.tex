@@ -133,13 +133,50 @@ Homepage: {\url{https://fedorahosted.org/lohit/}}
 \subsection {Reordering}
 \subsection {Dotted Circle}
 \subsection {Samvruthokaram}
+
+Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a days, 
+it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as Pseudo Samvruthokaram
+\footnote{Chandrakkala. Samvruthokaram. Chillaksharam.
+From the perspective of Malayalam Collation
+R. Chitrajakumar and N. Gangadharan
+Rachana Akshara Vedi \url{http://www.unicode.org/L2/L2005/05210-malayalam.pdf}}
+But using vowel sign of u and virama-{\malayalam ു്} to represent this is not rare.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample  അതു് ഉണ്ടു് }\\
+  \caption{Rendering of Samvruthokaram with Meera font.}
+\end{figure}
+
+As you see, the vowel sign u attach to the consonant and virama appears on top.
+With modern orthograhy the rendering is differnt, with different u and viram signs explicitly shown as shown below
+
+\begin{figure}[h]
+  \centering
+  {\raghumalayalam\textexample  അതു് ഉണ്ടു് }\\
+  \caption{Rendering of Samvruthokaram with Raghu Malayalam font.}
+\end{figure}
+
+It will look a bit odd to see these two signs in rendering in modern orthograhy. In modern orthograhy samvruthokaram is very rare. 
+Because of this there was an attempt to add a glyph like virama to denote Samvruthokaram in fonts like Raghu Malayalam and Lohit.
+But reverted recently(2013) since it was quite an experiment
+\footnote{Red Hat bugzilla:Samvruthokaram ligature is wrong \url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
+
+Insert content from:
+
+Red Hat bug: \url{https://bugzilla.redhat.com/show_bug.cgi?id=242016}
+
+Pango Bug \url{https://bugzilla.gnome.org/show_bug.cgi?id=504810}
+
+ICU Bug \url{http://bugs.icu-project.org/trac/ticket/6108}
+
 \subsection {Reph}
 \subsection {Dot Reph}
 \subsection {Chillus}
 \subsection {Conjunct Signs for യ, ര, ല}
 \subsection {Stacking}
-\subsection {Font metrics}
-\subsection {Positioning rules}
+\subsection {Font metrics} 
+\subsection {Positioning rules} 
 \subsection {ZWNJ and ZWJ Signs}
 \subsection {Prebase substitutions}
 \subsection {Akhand forms}
