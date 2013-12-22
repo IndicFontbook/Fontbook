@@ -4,6 +4,10 @@ Open Font Format Specification for Scripts of India
 Elaborate, Illustrated font development guideline document for scripts of India
 by font designers, developers, language experts.
 
+Mailing list
+------------
+https://groups.google.com/forum/#!forum/indicfontbook
+
 Building the book
 -----------------
 You need [XeTeX] (http://wiki.smc.org.in/XeTeX) to build this book. Install it
