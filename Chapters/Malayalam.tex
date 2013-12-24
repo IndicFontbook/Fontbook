@@ -26,7 +26,9 @@ virama, which follows any vowel sign that may be present and precedes
 any anusvara that may be present.
 
 FIXME samvruthokaram needs more explanation, refer
-{\url{http://thottingal.in/documents/Malayalam_Unicode_Report_of_Workshop_Kerala_University.pdf}}
+{\url{
+http://thottingal.in/documents/Malayalam_Unicode_Report_of_Workshop_Kerala_Unive
+rsity.pdf}}
 and {\url{http://smc.org.in/doc/rachana-malayalam-collation.pdf}}
 
 \secstar{Orthography variation}
@@ -70,14 +72,18 @@ they are represented by spacing characters following their consonants.
 മരതകക്കൂമ്പു പൊടിച്ചുവന്നു\\
 അരുമക്കിടാങ്ങളിലൊന്നായതിനേയു\\
 മഴകിപ്പുലക്കള്ളിയോമനിച്ചു}
-   \caption{Text rendering using modern orthography. Font used is Lohit Malayalam}
+   \caption{Text rendering using modern orthography. Font used is Lohit 
+Malayalam}
 \end{figure}
 
 The above examples give high level difference in orthography. 
-Since both orthography is prominent in day to day usage of Malayalam, it will be helpful to get more
-understanding about the orthography variation. So let us go some more deep into this differences.
+Since both orthography is prominent in day to day usage of Malayalam, it will 
+be helpful to get more
+understanding about the orthography variation. So let us go some more deep into 
+this differences.
 
-For vowel signs, only u vowel({\meera ു}) and uu vowel({\meera ൂ})  make the difference. {\meera ു}
+For vowel signs, only u vowel({\meera ു}) and uu vowel({\meera ൂ})  make the 
+difference. {\meera ു}
 \begin{figure}[h]
    Traditional: \\{\textexample{ \meera ക + ു = കു  \\
 ക + ൂ = കൂ } }\\
@@ -86,16 +92,20 @@ For vowel signs, only u vowel({\meera ു}) and uu vowel({\meera ൂ})  make the
    \caption{Rendering difference of u and uu vowel signs}
 \end{figure}
 
-As you can see, in traditional orthography the vowel sign attach to the consonant, while in modern script, the vowel sign is separate.
+As you can see, in traditional orthography the vowel sign attach to the 
+consonant, while in modern script, the vowel sign is separate.
 
-Reph sign varies in both orthographies. Reph sign is formed by VIRAMA+ RA ie {\malayalam ് + ര}.
+Reph sign varies in both orthographies. Reph sign is formed by VIRAMA+ RA ie 
+{\malayalam ് + ര}.
 \begin{figure}[h]
 Traditional:\\ {\meera\textexample  പ്ര }\\
 Modern: \\ {\lohitmalayalam\textexample  പ്ര }
    \caption{Rendering difference of u and uu vowel signs}
 \end{figure}
 
-As you can see, in traditional orthography the reph sign attach to the consonant, while in modern script,reph sign is separate and it get re-ordered to the left of consonant.
+As you can see, in traditional orthography the reph sign attach to the 
+consonant, while in modern script,reph sign is separate and it get re-ordered 
+to the left of consonant.
 
 
 \secstar{Reference fonts}
@@ -106,14 +116,16 @@ orthography we will use Lohit Malayalam.
 
 \subsection {Meera Font}
 {\meera മീര മാതൃക }
-// FIXME: Short introduction, designers, maintainers, usage info, popularity of the font.
+// FIXME: Short introduction, designers, maintainers, usage info, popularity of 
+the font.
 
 Meera font is maintained by Swathanthra Malayalam Computing initiative.
 
 Homepage: {\url{https://savannah.nongnu.org/projects/smc}}
 
 \subsection {Lohit Malayalam Font}
-// FIXME: Short introduction, designers, maintainers, usage info, popularity of the font.
+// FIXME: Short introduction, designers, maintainers, usage info, popularity of 
+the font.
 
 \subsection {History}
 In 2004, Red Hat released five Indian language fonts as open source licensed
@@ -134,13 +146,16 @@ Homepage: {\url{https://fedorahosted.org/lohit/}}
 \subsection {Dotted Circle}
 \subsection {Samvruthokaram}
 
-Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a days, 
-it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as Pseudo Samvruthokaram
+Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a 
+days, 
+it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as 
+Pseudo Samvruthokaram
 \footnote{Chandrakkala. Samvruthokaram. Chillaksharam.
 From the perspective of Malayalam Collation
 R. Chitrajakumar and N. Gangadharan
 Rachana Akshara Vedi \url{http://www.unicode.org/L2/L2005/05210-malayalam.pdf}}
-But using vowel sign of u and virama-{\malayalam ു്} to represent this is not rare.
+But using vowel sign of u and virama-{\malayalam ു്} to represent this is not 
+rare.
 
 \begin{figure}[h]
   \centering
@@ -149,7 +164,8 @@ But using vowel sign of u and virama-{\malayalam ു്} to represent this is no
 \end{figure}
 
 As you see, the vowel sign u attach to the consonant and virama appears on top.
-With modern orthograhy the rendering is differnt, with different u and viram signs explicitly shown as shown below
+With modern orthograhy the rendering is differnt, with different u and viram 
+signs explicitly shown as shown below
 
 \begin{figure}[h]
   \centering
@@ -157,18 +173,36 @@ With modern orthograhy the rendering is differnt, with different u and viram sig
   \caption{Rendering of Samvruthokaram with Raghu Malayalam font.}
 \end{figure}
 
-It will look a bit odd to see these two signs in rendering in modern orthograhy. In modern orthograhy samvruthokaram is very rare. 
-Because of this there was an attempt to add a glyph like virama to denote Samvruthokaram in fonts like Raghu Malayalam and Lohit.
+It will look a bit odd to see these two signs in rendering in modern 
+orthograhy. In modern orthograhy samvruthokaram is very rare. 
+Because of this there was an attempt to add a glyph like virama to denote 
+Samvruthokaram in fonts like Raghu Malayalam and Lohit.
 But reverted recently(2013) since it was quite an experiment
-\footnote{Red Hat bugzilla:Samvruthokaram ligature is wrong \url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
+\footnote{Red Hat bugzilla:Samvruthokaram ligature is wrong 
+\url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
 
-Insert content from:
+\subsubsection{History of Samvruthokaram rendering}
 
-Red Hat bug: \url{https://bugzilla.redhat.com/show_bug.cgi?id=242016}
+Samvruthokaram was one of the difficult rendering to get working in the initial 
+days of Malayalam computing.
+Rendering engines had the general concept that the u vowel sign will not join 
+with a virama. Of course Samvruthokaram was an exception to that rule.
+Till 2009, this problem continued. Rendering engines displayed samvruthokaram 
+with dotted circled around Virama. 
+Volunteer developers from Swathanthra Malayalam Computing project worked 
+closely with Pango\footnote{\url{http://www.pango.org/}}, 
+Qt\footnote{\url{http://qt-project.org}}, 
+ICU\footnote{\url{http://userguide.icu-project.org/layoutengine}} rendeirng 
+engines to get the bug fixed.
 
-Pango Bug \url{https://bugzilla.gnome.org/show_bug.cgi?id=504810}
+Bug reports in respective bug tracking systems gives a detailed history of this 
+effort.
 
-ICU Bug \url{http://bugs.icu-project.org/trac/ticket/6108}
+\begin{enumerate}
+  \item Red Hat bug: \url{https://bugzilla.redhat.com/show_bug.cgi?id=242016}
+  \item Pango Bug \url{https://bugzilla.gnome.org/show_bug.cgi?id=504810}
+  \item ICU Bug \url{http://bugs.icu-project.org/trac/ticket/6108}
+\end{enumerate}
 
 \subsection {Reph}
 \subsection {Dot Reph}
