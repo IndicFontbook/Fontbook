@@ -143,7 +143,17 @@ Homepage: {\url{https://fedorahosted.org/lohit/}}
 \section{Technical details}
 \subsection {Opentype Script Tags - mlym and mlm2}
 \subsection {Reordering}
-\subsection {Dotted Circle}
+\subsection {Vowel signs and combining marks}
+
+For every vowels except {\malayalam അ}, there are vowel signs in Malayalam 
+
+\begin{figure}[h]
+  {\meera\textexample ‌ാ ി ീ ു ൂ ൃ ൄ െ േ ൈ ൊ ോ ൌ ൗ ം ഃ }\\
+  \caption{Malayalam vowel signs.}
+\end{figure}
+
+TODO: explain reordering of vowel signs, normalization, repeated vowel signs, the case of {\malayalam ാം }
+
 \subsection {Samvruthokaram}
 
 Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a 
@@ -248,10 +258,33 @@ To make the rendering consistant, punctuation marks that match the font style
 should be present in the font.
 \item Include Arabic numbers
 \item All Malayalam characters encoded by the current Unicode version
-\item Zero width joiner Zero width non-joiner place holder glyphs - TODO explain 
-in detail
+\item Zero width joiner Zero width non-joiner place holder glyphs - TODO 
+explain in detail
 \item A fallback glyph mapped to .notdef, usually a box
-\item Dotted circle
+\item Dotted circle - To denote invalid combining marks, ie usually invalid 
+vowel signs at wrong positions, opentype specification 
+recommends to add a glyph of Unicode character U+25CC.
+\footnote{Invalid combining marks. \url{http://www.microsoft.com/typography/OpenTypeDev/malayalam/intro.htm}}
+The glyph should be a 
+dotted circle. A few examples where they will be used is given below.
+\begin{figure}[h]
+  \centering
+  {\meera\textexample ോ ു ി ുപ }\\
+  \caption{Dotted circle example}
+\end{figure}
+
+Rendering engines can decide whether a vowel sign is at valid position or not 
+and implementation may vary.
+One should not expect linguistic correctness on this. For example, a vowel sign 
+after a vowel is invalid for Malayalam, but following rendering does not show 
+dotted circle.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample ആാ ഊൂ }\\
+  \caption{Rendering not showing dotted circle even though incorrect in linguistic sense.}
+\end{figure}
+
 \item Malayalam glyphs with opentype feature tables
 \item Rendering consistancy - It will be easy to explain this with an example. 
 Consider the case of {\malayalam യ്ക}.The ka is stacked under ya. If a font has
@@ -271,8 +304,8 @@ be broken and it will render as follows:
   \caption{Inconsistant stacking of letters}
 \end{figure}
 
-It will also get broken if the font has  {\meera യ്ക്ക} but missed to add glyphs 
-for {\meera യ്ക്കു യ്ക്കൂ }.
+It will also get broken if the font has  {\meera യ്ക്ക} but missed to add 
+glyphs for {\meera യ്ക്കു യ്ക്കൂ }.
 
 \begin{figure}[h]
   \centering
