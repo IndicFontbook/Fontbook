@@ -224,3 +224,68 @@ effort.
 \subsection {Left and right bearings}
 \subsection {Italic variant}
 \subsection {Bold variant}
+
+\secstar{Design}
+\subsection{Number of glyphs}
+
+The main difference between traditional and new orthograhy is the number of 
+glyphs to be designed and drawned for a font.
+Traditional orthograhy fonts require more than 1000 glyphs while new orthograhy 
+fonts need less than 400 glyphs.
+
+Meera font has around 1100 glyphs while Raghu Malayalam font has around 350 
+glyphs.
+
+\subsection{Guidelines}
+
+There is no rule about whether a particular glyph can be present only in
+traditional font or new orthograhy font. It is upto the designer. But it is 
+possible to list certain guidelines about this.
+
+\begin{enumerate}
+\item Include basic punctuations. Punctuations can come inside Malayalam text.
+To make the rendering consistant, punctuation marks that match the font style 
+should be present in the font.
+\item Include Arabic numbers
+\item All Malayalam characters encoded by the current Unicode version
+\item Zero width joiner Zero width non-joiner place holder glyphs - TODO explain 
+in detail
+\item A fallback glyph mapped to .notdef, usually a box
+\item Dotted circle
+\item Malayalam glyphs with opentype feature tables
+\item Rendering consistancy - It will be easy to explain this with an example. 
+Consider the case of {\malayalam യ്ക}.The ka is stacked under ya. If a font has
+this kind of stacking, the same font must have a number of additional glyphs to 
+make rendering consistant.
+\begin{figure}[h]
+  \centering
+  {\meera\textexample യ്ക യ്ക്ക യ്ക്കു യ്ക്കൂ }\\
+  \caption{Consistant stacking of letters}
+\end{figure}
+
+If the designer miss to add {\meera യ്ക്ക യ്ക്കു യ്ക്കൂ }, the consistancy will 
+be broken and it will render as follows:
+\begin{figure}[h]
+  \centering
+  {\meera\textexample യ്ക യ്ക്‌ക യ്ക്‌കു യ്ക്‌കൂ }\\
+  \caption{Inconsistant stacking of letters}
+\end{figure}
+
+It will also get broken if the font has  {\meera യ്ക്ക} but missed to add glyphs 
+for {\meera യ്ക്കു യ്ക്കൂ }.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample യ്ക യ്ക്ക യ്ക്ക‌ു യ്ക്ക‌ൂ }\\
+  \caption{Inconsistant stacking of letters}
+\end{figure}
+
+If the font designer desides not to have glyph for {\meera യ്ക } at  all, none 
+of the above issues arise, but  {\meera യ്ക } is a common ligature in Malayalam.
+
+In the last example, rendering is not broken if the font is a new orthograhy 
+font. But if it is a traditional orthograhy font, designer should make sure all 
+stacked glyphs are present in the font to provide consistant rendering. This is 
+one of the reason for lot of glyphs appearing in a traditional orthograhy font.
+\end{enumerate}
+
