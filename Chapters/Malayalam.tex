@@ -152,13 +152,118 @@ For every vowels except {\malayalam അ}, there are vowel signs in Malayalam
   \caption{Malayalam vowel signs.}
 \end{figure}
 
-TODO: explain reordering of vowel signs, normalization, repeated vowel signs, the case of {\malayalam ാം }
+The vowel signs cannot stand alone. It always applies to a consonant. To denote 
+that linguistic property, a dotted
+rectangle appears if we try to render the vowel signs alone.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample ‌പ + ി =  പി }\\
+  \caption{Malayalam vowel  {\malayalam ി} getting applied.}
+\end{figure}
+
+In the above shown vowel signs {\malayalam െ, േ, ൈ, ൊ, ോ, and ൌ } needs to be 
+reordered before rendering.
+Rendering engines will reorder the glyphs before rendering and rendering engine 
+is aware of this property of the above vowels.
+Inside the font, nothing special need to be done to get this reordering. Fonts 
+just need the glyph.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample ‌പ + െ =  പെ }\\
+  \caption{Malayalam vowel  {\malayalam െ} getting applied after reordering.}
+\end{figure}
+
+vowel signs {\malayalam ൊ, ോ and ൌ} needs to be splitted before rendering. 
+First part will be applied at the beginning of consonant cluster
+and right part will be applied to end of consonant cluser. In rendering engine 
+terminology these vowel signs are known as "Split Matra".
+
+\begin{figure}[h]
+  {\meera\textexample ‌പ +  ൊ = പ + െ + ാ \\\\\
+  = െ + പ + ാ \\\\
+  = പൊ }
+  \caption{Malayalam vowel  {\malayalam ൊ} getting splitted and applied at left 
+and right of {\malayalam പ} .}
+\end{figure}
+
+In the above example, or in the rendering of split matra, the glyph mapped to 
+vowel signs {\malayalam ൊ, ോ and ൌ} has no role.
+Whatever glyph present in the font for vowel signs {\malayalam ൊ, ോ and ൌ} will 
+not be used. Instead of that, glyphs mapped to the components after split will 
+be used. So what matters is what glyphs are mapped to vowel signs {\malayalam 
+‌ാ, െ, േ , ൗ  } matters.
+
+Because of this, fonts will have glyphs to illustrate this process. For 
+example, Meera, Rachana fonts has the following drawing:
+
+\begin{figure}[h]
+  \includegraphics[width=0.8\textwidth]{malayalam-splitmatra-glyphs-meera.png}
+  \caption{Split matra glyphs inside Meera font for  {\malayalam ൊ, ോ and ൌ}}
+\end{figure}
+
+We mentioned that dotted circles will appear left of the vowel sign if it is 
+not attached to consonant or consonant cluster.
+But there are two known exceptions to this rule in Malayalam. One is 
+samvruthokaram. 
+In samvruthokaram - {\malayalam ു്} virama is applied to a vowel sign and this 
+can used to cause a rendering as shown below
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample തു‌്}\\
+  \caption{Wrong rendering of Samvruthokaram.}
+\end{figure}
+
+This bug was fixed in 2008 and See Samvruthokaram section for more details. It 
+now renders properly.
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample തു്}\\
+  \caption{Correct rendering of Samvruthokaram.}
+\end{figure}
+
+Another exception is {\malayalam ാം}. This combination of long a vowel sign and 
+anusvara is used to denote "nth" like
+{\malayalam 16ാം} or  {\malayalam 16-ാം} meaning 16th.
+
+{\malayalam ാ} sign cannot appear in this example without a dotted circle.
+To get the expected rendering, which is without dotted circle in this case, 
+Meera, Rachana and some other fonts has a trick. These fonts contains a special 
+glyph {\malayalam ാം}. This glyph is mapped to an akhand rule 
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample  ാം = ◌ + ാ + ം}\\
+  \caption{Akhand rule for {\malayalam ാം}. Dotted circle is included in the 
+rule.}
+\end{figure}
+
+With this akhand rule, we will get expected rendering for "nth" patterns as 
+shown below
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample 16-ാം}\\
+  \caption{16th with {\malayalam ാം} rendered correctly.}
+\end{figure}
+
+You might have a doubt why dot is appearing for anusvara since that also 
+normally applied to a consonant cluster. But there are cases anusvara applied to 
+vowel signs as shown below
+
+\begin{figure}[h]
+  \centering
+  {\meera\textexample നാലും, അടീം, ധൂം, ധിം, റാം, സ്റ്റെം, സ്റ്റോം}\\
+  \caption{Anusvara {\malayalam ം} applied to a vowel sign.}
+\end{figure}
 
 \subsection {Samvruthokaram}
 
 Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a 
-days, 
-it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as 
+days, it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as 
 Pseudo Samvruthokaram
 \footnote{Chandrakkala. Samvruthokaram. Chillaksharam.
 From the perspective of Malayalam Collation
@@ -264,7 +369,8 @@ explain in detail
 \item Dotted circle - To denote invalid combining marks, ie usually invalid 
 vowel signs at wrong positions, opentype specification 
 recommends to add a glyph of Unicode character U+25CC.
-\footnote{Invalid combining marks. \url{http://www.microsoft.com/typography/OpenTypeDev/malayalam/intro.htm}}
+\footnote{Invalid combining marks. 
+\url{http://www.microsoft.com/typography/OpenTypeDev/malayalam/intro.htm}}
 The glyph should be a 
 dotted circle. A few examples where they will be used is given below.
 \begin{figure}[h]
@@ -282,7 +388,8 @@ dotted circle.
 \begin{figure}[h]
   \centering
   {\meera\textexample ആാ ഊൂ }\\
-  \caption{Rendering not showing dotted circle even though incorrect in linguistic sense.}
+  \caption{Rendering not showing dotted circle even though incorrect in 
+linguistic sense.}
 \end{figure}
 
 \item Malayalam glyphs with opentype feature tables
