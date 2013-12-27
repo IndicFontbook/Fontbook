@@ -254,11 +254,31 @@ You might have a doubt why dot is appearing for anusvara since that also
 normally applied to a consonant cluster. But there are cases anusvara applied to 
 vowel signs as shown below
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   {\meera\textexample നാലും, അടീം, ധൂം, ധിം, റാം, സ്റ്റെം, സ്റ്റോം}\\
   \caption{Anusvara {\malayalam ം} applied to a vowel sign.}
 \end{figure}
+
+\subsubsection{Extra elongation for vowel signs}
+
+Repeated vowel signs are used to denote elongation of a vowel pronunciation. But rendering engines used to fail to render them properly
+because if vowel signs are repeating, from second vowel sign onwards it is not attached to a consonant cluster and it causes dotted circle.
+
+Now a days, Harfbuzz rendering engine does not put dotted circle in between them.
+
+\begin{figure}[h!]
+  \centering
+  {\meera\textexample ടാാാാ}\\
+  \caption{Repeated vowel signs.}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  {\meera\textexample ടാാാാാാാാ}\\
+  \caption{Repeated vowel signs, dotted circle start appearing after 4th vowel sign.}
+\end{figure}
+
 
 \subsection {Samvruthokaram}
 
