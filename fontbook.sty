@@ -18,9 +18,12 @@
 \usepackage{fontspec}
 \usepackage{xltxtra}
 \usepackage{polyglossia}
+\usepackage{xcolor}
+\usepackage{sectsty}
 
 %image path
 \graphicspath{ {./Chapters/} }
+
 
 % Use Malayalam Hyphenation with Polyglossia
 \setdefaultlanguage{english}
@@ -31,7 +34,7 @@
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
-{\normalfont\bfseries\filcenter}
+{\normalfont\bfseries\filcenter\color{cyan}}
 {\LARGE\thechapter}
 {1ex}
 {\titlerule[2pt]
@@ -39,6 +42,8 @@
 \LARGE}
 [\vspace{1ex}%
 {\titlerule[2pt]}]
+
+\sectionfont{\color{cyan}}  % sets colour of sections
 
 % Hindi/Devanagari styles
 % TODO: Add more language specific styles - mainly reference fonts
