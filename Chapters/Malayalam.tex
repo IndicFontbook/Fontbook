@@ -19,7 +19,7 @@ Malayalam.
 When the candrakala sign is visibly shown in Malayalam, it usually
 indicates the suppression of the inherent vowel, but it sometimes
 indicates instead a reduced schwa sound, often called “half-u” or
-samvruthokaram. In the later case, there can also be a -u vowel sign,
+samvruthokaram. In the latter case, there can also be a -u vowel sign,
 and the base character can be a vowel letter. In all cases, the
 candrakala sign is represented by the character U+0D4D malayalam sign
 virama, which follows any vowel sign that may be present and precedes
@@ -41,11 +41,11 @@ orthography. Modern orthography is also known as reformed orthography.
 Old orthography is generally identified by large number of ligature
 glyphs, often formed by more than one consonants or vowel
 combination. For example, in old orthography, consonant {\meera ക} +
-vowel { \meera ൂ} will form കൂ as a single ligature. similarly a
+vowel { \meera ൂ} will form {\meera കൂ} as a single ligature. similarly a
 conjunct {\meera ക + ് + ത} will form {\meera ക്ത} as a single
 ligature. Font developers of traditional stye fonts design and draw
 this large set of glyphs. For a reference font Meera, the number of
-glyphs is approximately over a thousad.
+glyphs is approximately over a thousand.
 
 In the 1970s and 1980s, Malayalam underwent orthographic reform due to
 printing difficulties. The treatment of the combining vowel signs u
@@ -56,7 +56,7 @@ they are represented by spacing characters following their consonants.
 
 
 \begin{figure}[h]
-   {\meera\large  മലയപ്പുലയനാ മാടത്തിൻമുറ്റത്തു\\
+   {\meera\large  മലയപ്പുലയനാ മാടത്തിന്‍മുറ്റത്തു\\
 മഴ വന്ന നാളൊരു വാഴ നട്ടു.\\
 മനതാരിലാശകൾപോലതിലോരോരോ \\
 മരതകക്കൂമ്പു പൊടിച്ചുവന്നു.\\
@@ -66,7 +66,7 @@ they are represented by spacing characters following their consonants.
 \end{figure}
 
 \begin{figure}[h]
-   {\lohitmalayalam\large  മലയപ്പുലയനാ മാടത്തിൻമുറ്റത്തു\\
+   {\lohitmalayalam\large  മലയപ്പുലയനാ മാടത്തിന്‍മുറ്റത്തു\\
 മഴ വന്ന നാളൊരു വാഴ നട്ടു\\
 മനതാരിലാശകൾപോലതിലോരോരോ \\
 മരതകക്കൂമ്പു പൊടിച്ചുവന്നു\\
@@ -208,80 +208,79 @@ not attached to consonant or consonant cluster.
 But there are two known exceptions to this rule in Malayalam. One is 
 samvruthokaram. 
 In samvruthokaram - {\malayalam ു്} virama is applied to a vowel sign and this 
-can used to cause a rendering as shown below
+can used to cause a rendering as shown in Figure \ref{WrongSamvruthokaram}.
 
 \begin{figure}[h]
   \centering
   {\meera\textexample തു‌്}\\
   \caption{Wrong rendering of Samvruthokaram.}
+  \label{WrongSamvruthokaram}
 \end{figure}
 
-This bug was fixed in 2008 and See Samvruthokaram section for more details. It 
-now renders properly.
+This bug was fixed in 2008 and See section \ref{Samvruthokaram} on  Samvruthokaram  for more details. It now renders properly as seen in Figure \ref{CorrectSamvruthokaram}.
 
 \begin{figure}[h]
   \centering
   {\meera\textexample തു്}\\
   \caption{Correct rendering of Samvruthokaram.}
+  \label{CorrectSamvruthokaram}
 \end{figure}
 
-Another exception is {\malayalam ാം}. This combination of long a vowel sign and 
-anusvara is used to denote "nth" like
-{\malayalam 16ാം} or  {\malayalam 16-ാം} meaning 16th.
-
-{\malayalam ാ} sign cannot appear in this example without a dotted circle.
-To get the expected rendering, which is without dotted circle in this case, 
-Meera, Rachana and some other fonts has a trick. These fonts contains a special 
-glyph {\malayalam ാം}. This glyph is mapped to an akhand rule 
+Another exception is {\malayalam ാം}. This combination of a long vowel sign and 
+anusvara is used to denote "nth" like,
+{\malayalam 16ാം} or  {\malayalam 16-ാം} meaning 16th. {\malayalam ാ} sign cannot appear in this example without a dotted circle. To get the expected rendering, which is without dotted circle in this case, Meera, Rachana and some other fonts has a trick. These fonts contains a special glyph {\malayalam ാം}. This glyph is mapped to an akhand rule, see Figure \ref{AkhandruleAAM}.
 
 \begin{figure}[h]
   \centering
   {\meera\textexample  ാം = ◌ + ാ + ം}\\
   \caption{Akhand rule for {\malayalam ാം}. Dotted circle is included in the 
 rule.}
+\label{AkhandruleAAM}
 \end{figure}
-
-With this akhand rule, we will get expected rendering for "nth" patterns as 
-shown below
 
 \begin{figure}[h]
   \centering
   {\meera\textexample 16-ാം}\\
   \caption{16th with {\malayalam ാം} rendered correctly.}
+  \label{CorrectAAMrendering}
 \end{figure}
+
+With this akhand rule, we will get expected rendering for "nth" patterns as 
+shown in Figure \ref{CorrectAAMrendering}.
+
 
 You might have a doubt why dot is appearing for anusvara since that also 
 normally applied to a consonant cluster. But there are cases anusvara applied to 
-vowel signs as shown below
+vowel signs as shown in figure \ref{Anusvararendering}.
 
 \begin{figure}[h!]
   \centering
   {\meera\textexample നാലും, അടീം, ധൂം, ധിം, റാം, സ്റ്റെം, സ്റ്റോം}\\
   \caption{Anusvara {\malayalam ം} applied to a vowel sign.}
+  \label{Anusvararendering}
 \end{figure}
 
 \subsubsection{Extra elongation for vowel signs}
 
-Repeated vowel signs are used to denote elongation of a vowel pronunciation. But rendering engines used to fail to render them properly
-because if vowel signs are repeating, from second vowel sign onwards it is not attached to a consonant cluster and it causes dotted circle.
+Repeated vowel signs are used to denote elongation of a vowel pronunciation. But rendering engines used to fail to render them properly because if vowel signs are repeating, from second vowel sign onwards it is not attached to a consonant cluster and it causes dotted circle. Now a days, Harfbuzz rendering engine does not put dotted circle in between them. See Figures \ref{elongatedvowel-dotted} and \ref{elongated-nodotted}.
 
-Now a days, Harfbuzz rendering engine does not put dotted circle in between them.
-
-\begin{figure}[h!]
+\begin{figure}[h]
   \centering
   {\meera\textexample ടാാാാ}\\
   \caption{Repeated vowel signs.}
+  \label{elongatedvowel-dotted}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[h]
   \centering
   {\meera\textexample ടാാാാാാാാ}\\
   \caption{Repeated vowel signs, dotted circle start appearing after 4th vowel sign.}
+  \label{elongated-nodotted}
 \end{figure}
 
 
 \subsection {Samvruthokaram}
-
+\label{Samvruthokaram}
 Samvruthokaram is a mid vowel sound representation for vowel sign u. Now a 
 days, it is denoted just using virama like {\malayalam അത് ഉണ്ട് }, also known as 
 Pseudo Samvruthokaram
@@ -292,27 +291,29 @@ Rachana Akshara Vedi \url{http://www.unicode.org/L2/L2005/05210-malayalam.pdf}}
 But using vowel sign of u and virama-{\malayalam ു്} to represent this is not 
 rare.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   {\meera\textexample  അതു് ഉണ്ടു് }\\
   \caption{Rendering of Samvruthokaram with Meera font.}
+  \label{SamvruthokaramTraditional}
 \end{figure}
 
 As you see, the vowel sign u attach to the consonant and virama appears on top.
 With modern orthograhy the rendering is differnt, with different u and viram 
-signs explicitly shown as shown below
+signs explicitly shown as shown in Figure \ref{SamvruthokaramModern}. Samvruthokaram rendering in traditional orthography is shown in Meera font in Figure \ref{SamvruthokaramTraditional} for a comparison.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   {\raghumalayalam\textexample  അതു് ഉണ്ടു് }\\
   \caption{Rendering of Samvruthokaram with Raghu Malayalam font.}
+  \label{SamvruthokaramModern}
 \end{figure}
 
 It will look a bit odd to see these two signs in rendering in modern 
 orthograhy. In modern orthograhy samvruthokaram is very rare. 
 Because of this there was an attempt to add a glyph like virama to denote 
 Samvruthokaram in fonts like Raghu Malayalam and Lohit.
-But reverted recently(2013) since it was quite an experiment
+But reverted recently(2013) since it was quite an experiment.
 \footnote{Red Hat bugzilla:Samvruthokaram ligature is wrong 
 \url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
 
