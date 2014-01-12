@@ -380,9 +380,9 @@ These signs attach to the previous consonant cluster just like vowel signs.
 \section{Design}
 \subsection{Number of glyphs}
 
-The main difference between traditional and new orthograhy is the number of 
-glyphs to be designed and drawned for a font.
-Traditional orthograhy fonts require more than 1000 glyphs while new orthograhy 
+The main difference between traditional and new orthography is the number of 
+glyphs to be designed and drawn for a font.
+Traditional orthography fonts require more than 1000 glyphs while new orthograhy 
 fonts need less than 400 glyphs.
 
 Meera font has around 1100 glyphs while Raghu Malayalam font has around 350 
@@ -391,18 +391,18 @@ glyphs.
 \subsection{Guidelines}
 
 There is no rule about whether a particular glyph can be present only in
-traditional font or new orthograhy font. It is upto the designer. But it is 
+traditional font or new orthography font. It is up to the designer. But it is 
 possible to list certain guidelines about this.
 
 \begin{enumerate}
 \item Include basic punctuations. Punctuations can come inside Malayalam text.
-To make the rendering consistant, punctuation marks that match the font style 
+To make the rendering consistent, punctuation marks that match the font style 
 should be present in the font.
 \item Include Arabic numbers
 \item All Malayalam characters encoded by the current Unicode version
 \item Zero width joiner Zero width non-joiner place holder glyphs - TODO 
 explain in detail
-\item A fallback glyph mapped to .notdef, usually a box
+\item A fall back glyph mapped to .notdef, usually a box
 \item Dotted circle - To denote invalid combining marks, ie usually invalid 
 vowel signs at wrong positions, opentype specification 
 recommends to add a glyph of Unicode character U+25CC.
@@ -430,22 +430,22 @@ linguistic sense.}
 \end{figure}
 
 \item Malayalam glyphs with opentype feature tables
-\item Rendering consistancy - It will be easy to explain this with an example. 
+\item Rendering consistency - It will be easy to explain this with an example. 
 Consider the case of {\malayalam യ്ക}.The ka is stacked under ya. If a font has
 this kind of stacking, the same font must have a number of additional glyphs to 
-make rendering consistant.
+make rendering consistent.
 \begin{figure}[h!]
   \centering
   {\meera\textexample യ്ക യ്ക്ക യ്ക്കു യ്ക്കൂ }\\
-  \caption{Consistant stacking of letters}
+  \caption{Consistent stacking of letters}
 \end{figure}
 
-If the designer miss to add {\meera യ്ക്ക യ്ക്കു യ്ക്കൂ }, the consistancy will 
+If the designer miss to add {\meera യ്ക്ക യ്ക്കു യ്ക്കൂ }, the consistency will 
 be broken and it will render as follows:
 \begin{figure}[h]
   \centering
   {\meera\textexample യ്ക യ്ക്‌ക യ്ക്‌കു യ്ക്‌കൂ }\\
-  \caption{Inconsistant stacking of letters}
+  \caption{Inconsistent stacking of letters}
 \end{figure}
 
 It will also get broken if the font has  {\meera യ്ക്ക} but missed to add 
@@ -454,16 +454,16 @@ glyphs for {\meera യ്ക്കു യ്ക്കൂ }.
 \begin{figure}[h]
   \centering
   {\meera\textexample യ്ക യ്ക്ക യ്ക്ക‌ു യ്ക്ക‌ൂ }\\
-  \caption{Inconsistant stacking of letters}
+  \caption{Inconsistent stacking of letters}
 \end{figure}
 
-If the font designer desides not to have glyph for {\meera യ്ക } at  all, none 
+If the font designer decides not to have glyph for {\meera യ്ക } at  all, none 
 of the above issues arise, but  {\meera യ്ക } is a common ligature in Malayalam.
 
-In the last example, rendering is not broken if the font is a new orthograhy 
-font. But if it is a traditional orthograhy font, designer should make sure all 
-stacked glyphs are present in the font to provide consistant rendering. This is 
-one of the reason for lot of glyphs appearing in a traditional orthograhy font.
+In the last example, rendering is not broken if the font is a new orthography 
+font. But if it is a traditional orthography font, designer should make sure all 
+stacked glyphs are present in the font to provide consistent rendering. This is 
+one of the reason for lot of glyphs appearing in a traditional orthography font.
 
 \begin{figure}[h]
   \centering
