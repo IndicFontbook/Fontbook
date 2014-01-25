@@ -10,8 +10,8 @@ https://groups.google.com/forum/#!forum/indicfontbook
 
 [Announcement and call for participation ](http://thottingal.in/blog/2014/01/11/collaboratively-edited-documentation-for-indic-font-developers/)
 
-Latest versiion
----------------
+Latest version
+--------------
 http://thottingal.in/documents/Fontbook.pdf
 
 
@@ -33,5 +33,7 @@ make
 
 Contributing
 ------------
-
-You need not know TeX to contibute!. You may contribute the content for this collaboratively edited document by any convenient method- eg: filing an issue here with content, mailing the content to santhosh dot thottingal at gmail dot com etc
+You need not know TeX to contribute! You may contribute the content for this
+collaboratively edited document by any convenient method - eg: filing an issue
+here with content, mailing the content to: santhosh dot thottingal at gmail dot
+com etc
