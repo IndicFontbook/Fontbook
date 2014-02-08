@@ -37,3 +37,9 @@ You need not know TeX to contribute! You may contribute the content for this
 collaboratively edited document by any convenient method - eg: filing an issue
 here with content, mailing the content to: santhosh dot thottingal at gmail dot
 com etc
+
+License
+-------
+
+The book and its content is licenced under CC-BY-SA. For questions about the book
+contact santhosh.thottingal at gmail.com.
