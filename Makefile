@@ -3,7 +3,7 @@ all: clean pdf html
 
 pdf: clean Fontbook.pdf
 
-%.html:
+html:
 	latex2html -html_version 4.0,latin1,unicode Fontbook.tex
 
 %.pdf: Fontbook.tex *.tex *.sty
