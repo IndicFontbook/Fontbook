@@ -217,7 +217,8 @@ can used to cause a rendering as shown in Figure \ref{WrongSamvruthokaram}.
   \label{WrongSamvruthokaram}
 \end{figure}
 
-This bug was fixed in 2008 and See section \ref{Samvruthokaram} on  Samvruthokaram  for more details. It now renders properly as seen in Figure \ref{CorrectSamvruthokaram}.
+This bug was fixed in 2008 and See section \ref{Samvruthokaram} on Samvruthokaram
+for more details. It now renders properly as seen in Figure \ref{CorrectSamvruthokaram}.
 
 \begin{figure}[h]
   \centering
@@ -227,8 +228,12 @@ This bug was fixed in 2008 and See section \ref{Samvruthokaram} on  Samvruthokar
 \end{figure}
 
 Another exception is {\malayalam ാം}. This combination of a long vowel sign and
-anusvara is used to denote "nth" like,
-{\malayalam 16ാം} or  {\malayalam 16-ാം} meaning 16th. {\malayalam ാ} sign cannot appear in this example without a dotted circle. To get the expected rendering, which is without dotted circle in this case, Meera, Rachana and some other fonts has a trick. These fonts contains a special glyph {\malayalam ാം}. This glyph is mapped to an akhand rule, see Figure \ref{AkhandruleAAM}.
+anusvara is used to denote "nth" like, {\malayalam 16ാം} or  {\malayalam 16-ാം}
+meaning 16th. {\malayalam ാ} sign cannot appear in this example without a dotted
+circle. To get the expected rendering, which is without dotted circle in this case,
+Meera, Rachana and some other fonts has a trick. These fonts contains a special
+glyph {\malayalam ാം}. This glyph is mapped to an akhand rule, see
+Figure \ref{AkhandruleAAM}.
 
 \begin{figure}[h]
   \centering
@@ -262,7 +267,12 @@ vowel signs as shown in figure \ref{Anusvararendering}.
 
 \subsubsection{Extra elongation for vowel signs}
 
-Repeated vowel signs are used to denote elongation of a vowel pronunciation. But rendering engines used to fail to render them properly because if vowel signs are repeating, from second vowel sign onwards it is not attached to a consonant cluster and it causes dotted circle. Now a days, Harfbuzz rendering engine does not put dotted circle in between them. See Figures \ref{elongatedvowel-dotted} and \ref{elongated-nodotted}.
+Repeated vowel signs are used to denote elongation of a vowel pronunciation.
+But rendering engines used to fail to render them properly because if vowel
+signs are repeating, from second vowel sign onwards it is not attached to a
+consonant cluster and it causes dotted circle. Now a days, Harfbuzz rendering
+engine does not put dotted circle in between them. See Figures
+\ref{elongatedvowel-dotted} and \ref{elongated-nodotted}.
 
 \begin{figure}[h]
   \centering
@@ -312,21 +322,19 @@ Figure \ref{SamvruthokaramTraditional} for a comparison.
 \end{figure}
 
 It will look a bit odd to see these two signs in rendering in modern
-orthograhy. In modern orthograhy samvruthokaram is very rare.
-Because of this there was an attempt to add a glyph like virama to denote
-Samvruthokaram in fonts like Raghu Malayalam and Lohit.
-But reverted recently(2013) since it was quite an experiment.
-\footnote{Red Hat bugzilla:Samvruthokaram ligature is wrong
-\url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
+orthograhy. In modern orthograhy samvruthokaram is very rare. Because of this
+there was an attempt to add a glyph like virama to denote Samvruthokaram in
+fonts like Raghu Malayalam and Lohit. But reverted recently(2013) since it
+was quite an experiment. \footnote{Red Hat bugzilla:Samvruthokaram ligature is
+wrong \url{https://bugzilla.redhat.com/show_bug.cgi?id=1013183}}
 
 \subsubsection{History of Samvruthokaram rendering}
 
 Samvruthokaram was one of the difficult rendering to get working in the initial
-days of Malayalam computing.
-Rendering engines had the general concept that the u vowel sign will not join
-with a virama. Of course Samvruthokaram was an exception to that rule.
-Till 2009, this problem continued. Rendering engines displayed samvruthokaram
-with dotted circled around Virama.
+days of Malayalam computing. Rendering engines had the general concept that the
+u vowel sign will not join with a virama. Of course Samvruthokaram was an
+exception to that rule. Till 2009, this problem continued. Rendering engines
+displayed samvruthokaram with dotted circled around Virama.
 Volunteer developers from Swathanthra Malayalam Computing project worked
 closely with Pango\footnote{\url{http://www.pango.org/}},
 Qt\footnote{\url{http://qt-project.org}},
@@ -362,11 +370,11 @@ These signs attach to the previous consonant cluster just like vowel signs.
 \subsection {Reph}
 \subsection {Dot Reph}
 
-Dot-Reph is used to represent Malayalam letter  {\meera ര} in its dead
-form(or without vowel form), as a dot over the consonant
-following it.  It is denoted by a dot on top of the letter.
-Dot reph is also known as Gopi Reph.
-Usage of Dot Reph is not popular now a days compared to the texts in past decades.
+Dot-Reph is used to represent Malayalam letter  {\meera ര} in its dead form
+(or without vowel form), as a dot over the consonant following it.  It is
+denoted by a dot on top of the letter. Dot reph is also known as Gopi Reph.
+Usage of Dot Reph is not popular now a days compared to the texts in past
+decades.
 
 \begin{figure}[h!]
   \centering
@@ -374,7 +382,8 @@ Usage of Dot Reph is not popular now a days compared to the texts in past decade
   \caption{Dot Reph}
 \end{figure}
 
-The glyph can be circle shaped or in the form of a water drop upside down(also known as a Gopi sign).
+The glyph can be circle shaped or in the form of a water drop upside down (also
+known as a Gopi sign).
 
 \begin{figure}[h!]
   \centering
@@ -382,8 +391,9 @@ The glyph can be circle shaped or in the form of a water drop upside down(also k
   \caption{Rendering of word കര്‍ണ്ണന്‍ without and with dotreph}
 \end{figure}
 
-In the above example, the word meaning remains same in both forms.
-The Dot Reph was not encoded till unicode version 5.1.
+In the above example, the word meaning remains same in both forms. The Dot Reph
+was not encoded till unicode version 5.1.
+
 One of the reason for not having an atomic code point in initial versions is,
 it was considered as a typographers choice to use it as a glyph variant for Chillu R.
 
@@ -393,19 +403,21 @@ the reason for encodings were given as
 
 \begin{enumerate}
 \item  {\malayalam ര + ് + ZWJ} is the natural choice for Dot Reph, but already used
-for MALAYALAM CHILLU RR before Unicode 5.1. So if somebody want to use both Chillu form and Dot Reph, it is impossible.
+for MALAYALAM CHILLU RR before Unicode 5.1. So if somebody want to use both
+Chillu form and Dot Reph, it is impossible.
 \item If {\malayalam ര + ് } is used for Dot Reph, it will conflict with the usual
 usage of that sequence for words like {\malayalam ഭാര്യ, സൂര്യന്‍, കാര്യം } etc will break.
 \item If {\malayalam റ + ് } is used for Dot Reph, In the words like
 {\malayalam ഭാര്യ, സൂര്യന്‍, കാര്യം } etc, it is ര  that forms the conjuncts and not  {\malayalam റ}.
 \end{enumerate}
 
-Swathanthra Malayalam computing had opposed this proposal in the document they submitted
-to Unicode \footnote{Atomic chillu's are Unacceptable L2/08-038 \url{http://wiki.smc.org.in/images/2/23/SMC_Unicode_5.1.pdf}}
-with alternate way of representing Dot Reph without introducing a code point difference
-to words with and without Dot Reph, as in the {\malayalam കര്‍ണ്ണന്‍} example. Their proposal was to use Dot Reph if a font maps
-{\malayalam ര + ്  } to a Dot Reph glyph or fallback to {\malayalam ര്‍} if the font
-does not have the glyph. But this was not accepted and in Unicode 5.1, Dot Reph was encoded.
+Swathanthra Malayalam computing had opposed this proposal in the document they
+submitted to Unicode \footnote{Atomic chillu's are Unacceptable L2/08-038 \url{http://wiki.smc.org.in/images/2/23/SMC_Unicode_5.1.pdf}}
+with alternate way of representing Dot Reph without introducing a code point
+difference to words with and without Dot Reph, as in the {\malayalam കര്‍ണ്ണന്‍}
+example. Their proposal was to use Dot Reph if a font maps {\malayalam ര + ്  }
+to a Dot Reph glyph or fallback to {\malayalam ര്‍} if the font does not have
+the glyph. But this was not accepted and in Unicode 5.1, Dot Reph was encoded.
 
 The Dot Reph appears as a dot above the subsequent Malayalam consonant or cluster.
 
@@ -538,4 +550,3 @@ one of the reason for lot of glyphs appearing in a traditional orthography font.
 \end{figure}
 
 \end{enumerate}
-
