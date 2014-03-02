@@ -21,7 +21,7 @@ indicates the suppression of the inherent vowel, but it sometimes
 indicates instead a reduced schwa sound, often called “half-u” or
 samvruthokaram. In the latter case, there can also be a -u vowel sign,
 and the base character can be a vowel letter. In all cases, the
-candrakala sign is represented by the character U+0D4D malayalam sign
+candrakala sign is represented by the character U+0D4D Malayalam sign
 virama, which follows any vowel sign that may be present and precedes
 any anusvara that may be present.
 
@@ -43,11 +43,11 @@ glyphs, often formed by more than one consonants or vowel
 combination. For example, in old orthography, consonant {\meera ക} +
 vowel { \meera ൂ} will form {\meera കൂ} as a single ligature. similarly a
 conjunct {\meera ക + ് + ത} will form {\meera ക്ത} as a single
-ligature. Font developers of traditional stye fonts design and draw
+ligature. Font developers of traditional style fonts design and draw
 this large set of glyphs. For a reference font Meera, the number of
 glyphs is approximately over a thousand.
 
-In the 1970s and 1980s, Malayalam underwent orthographic reform due to
+In the 1970's and 1980's, Malayalam underwent orthographic reform due to
 printing difficulties. The treatment of the combining vowel signs u
 and uu was simplified at this time. These vowel signs had previously
 been represented using special cluster graphemes where the vowel signs
@@ -95,7 +95,7 @@ difference. {\meera ു}
 As you can see, in traditional orthography the vowel sign attach to the
 consonant, while in modern script, the vowel sign is separate.
 
-Reph sign varies in both orthographies. Reph sign is formed by VIRAMA+ RA ie
+Reph sign varies in both orthographies. Reph sign is formed by VIRAMA+ RA i.e,
 {\malayalam ് + ര}.
 \begin{figure}[h]
 Traditional:\\ {\meera\textexample  പ്ര }\\
@@ -129,7 +129,7 @@ the font.
 
 \subsection {History}
 In 2004, Red Hat released five Indian language fonts as open source licensed
-under the GPL. In 2011, Red Hat relicensed fonts under SIL OFL 1.1 license.
+under the GPL. In 2011, Red Hat re-licensed fonts under SIL OFL 1.1 license.
 The fonts named Lohit which means Red in Sanskrit. Currently, the font family
 supports 21 Indian languages: Assamese, Bengali, Devanagari (Hindi, Kashmiri,
 Konkani, Maithili, Marathi, Nepali, Sindhi, Santali, Bodo, Dogri), Gujarati,
@@ -175,16 +175,16 @@ just need the glyph.
   \caption{Malayalam vowel  {\malayalam െ} getting applied after reordering.}
 \end{figure}
 
-vowel signs {\malayalam ൊ, ോ and ൌ} needs to be splitted before rendering.
+vowel signs {\malayalam ൊ, ോ and ൌ} needs to be spit before rendering.
 First part will be applied at the beginning of consonant cluster
-and right part will be applied to end of consonant cluser. In rendering engine
+and right part will be applied to end of consonant cluster. In rendering engine
 terminology these vowel signs are known as "Split Matra".
 
 \begin{figure}[h]
   {\meera\textexample ‌പ +  ൊ = പ + െ + ാ \\\\\
   = െ + പ + ാ \\\\
   = പൊ }
-  \caption{Malayalam vowel  {\malayalam ൊ} getting splitted and applied at left
+  \caption{Malayalam vowel  {\malayalam ൊ} getting spit and applied at left
 and right of {\malayalam പ} .}
 \end{figure}
 
@@ -309,7 +309,7 @@ rare.
 \end{figure}
 
 As you see, the vowel sign u attach to the consonant and virama appears on top.
-With modern orthograhy the rendering is differnt, with different u and viram
+With modern orthography the rendering is different, with different u and virama
 signs explicitly shown as shown in Figure \ref{SamvruthokaramModern}.
 Samvruthokaram rendering in traditional orthography is shown in Meera font in
 Figure \ref{SamvruthokaramTraditional} for a comparison.
@@ -322,7 +322,7 @@ Figure \ref{SamvruthokaramTraditional} for a comparison.
 \end{figure}
 
 It will look a bit odd to see these two signs in rendering in modern
-orthograhy. In modern orthograhy samvruthokaram is very rare. Because of this
+orthography. In modern orthography samvruthokaram is very rare. Because of this
 there was an attempt to add a glyph like virama to denote Samvruthokaram in
 fonts like Raghu Malayalam and Lohit. But reverted recently(2013) since it
 was quite an experiment. \footnote{Red Hat bugzilla:Samvruthokaram ligature is
@@ -338,7 +338,7 @@ displayed samvruthokaram with dotted circled around Virama.
 Volunteer developers from Swathanthra Malayalam Computing project worked
 closely with Pango\footnote{\url{http://www.pango.org/}},
 Qt\footnote{\url{http://qt-project.org}},
-ICU\footnote{\url{http://userguide.icu-project.org/layoutengine}} rendeirng
+ICU\footnote{\url{http://userguide.icu-project.org/layoutengine}} rendering
 engines to get the bug fixed.
 
 Bug reports in respective bug tracking systems gives a detailed history of this
