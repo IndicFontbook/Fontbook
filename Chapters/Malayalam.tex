@@ -435,24 +435,35 @@ More examples of words with Dot Reph is given below.
   \caption{More Dot Reph examples}
 \end{figure}
 
-Rendering complexities of Dot Reph, with examples such as {\meera ആൎക്ക്  വൎത്തുളം  സുഹാൎത്തോ}.\\
-Dot Reph is best implemented in font using Opentype Glyph Class 'Mark'. Base glyphs and conjuncts are not marked as 'Mark' class, but an Anchor point to those glyphs could be added indicating the position where Dot Reph would be placed.\\
+\textbf{Rendering complexities of Dot Reph}, with examples such as {\meera ആൎക്ക്  വൎത്തുളം  സുഹാൎത്തോ}.\\
+Dot Reph is best implemented in font using Opentype Glyph Class ‘Mark’. Base glyphs and conjuncts are not marked as ‘Mark’ class, but an Anchor point to those glyphs could be added indicating the position where Dot Reph would be placed.\\
 Harfbuzz and Uniscribe reorders Dot Reph after the base glyph/conjunct. For instance \texttt{hb-shape} utility (from Harfbuzz source tree) shows the output of {\meera ൎത്തു} \texttt{<dotreph, th1, xx(virama), th1, u1(u-sign)>} as \\  \texttt{[th1th1u1=0+2461|dotreph=0\@-575,-5+0]}. Thus, it is only necessary to add an Anchor point to glyph \texttt{th1th1u1} at the desired coordinate to render dotreph.\\
 
 An example of how to do this using Fontforge:
-\begin{figure}[h!]
+\begin{figure}[H]	%Place the images right here. via ‘float’ package
   \includegraphics[width=0.5\textwidth]{images/malayalam-meera-dotreph-mark.png}
-  \caption{Set OT Glyph Class of dotreph as 'Mark'}
+  \caption{Set OT Glyph Class of \texttt{dotreph} as ‘Mark’}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{images/malayalam-meera-gpos-abvm-1.png}
+  \caption{Add \texttt{‘abvm’ GPOS} rule for positioning Dot Reph}
+\end{figure}
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{images/malayalam-meera-gpos-abvm-2.png}
+  \caption{Add \texttt{dotreph} Anchor Class}
+\end{figure}
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{images/malayalam-meera-gpos-abvm-3.png}
+  \caption{Anchor control on Base characters (not marked as ‘Mark’ class)}
+\end{figure}
+\begin{figure}[H]
   \includegraphics[width=0.3\textwidth]{images/malayalam-meera-conjunct-add-anchor.png}
   \caption{Add Anchor point menu}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
   \includegraphics[width=0.65\textwidth]{images/malayalam-meera-conjunct-add-anchor-2.png}
   \caption{Position the dotreph Anchor point on the glyph}
 \end{figure}
-
 
 \subsection {Chillus}
 \subsection {Stacking}
