@@ -1,7 +1,44 @@
 \chapter{Open font format}
 
 \section{Introduction}
+\section {Opentype feature Tags}
+The OpenType format defines a number of typographic features that a particular font may support.
+The following tables list the features defined in version 1.6 of the OpenType specification and
+applicable for Indic scripts.
 
+OpenType features may be applicable only to certain language scripts or specific languages, 
+or in certain writing modes. The features are split into several tables accordingly.
+
+\begin{center}
+\begin{longtable}{ | p{2cm} | p{1cm} | p{3cm} | p{5cm} |}
+\caption{Opentype feature tags for Indic scripts}
+\label{tab:otscripttagsindic} \\
+
+\hline
+Long name                   & tag  & type & Description                                                                          \\
+\hline
+Above-base Forms            & abvf & simple substitution of one glyph with another  & Replaces the diacritic part of a vowel sign in Khmer etc., e.g. ä to aͤ              \\ \hline
+Above-base Mark Positioning & abvm & positioning of mark glyphs relative to base or ligature & Positions a diacritic mark on top of the base glyph                                  \\\hline
+Above-base Substitutions    & abvs & ligatures   & Replaces a pair of base and top diacritic mark by a ligature, e.g. ä to æ            \\\hline
+Below-base Forms            & blwf & ligatures   & Replaces the subscript part of a consonant compound in Khmer etc., e.g. ş to ș       \\\hline
+Below-base Mark Positioning & blwm & positioning of mark glyphs relative to base or ligature & Positions a diacritic mark on top of the base glyph                                  \\\hline
+Below-base Substitutions    & blws & ligatures  & Replaces a pair of base and bottom diacritic mark by a ligature, e.g. ç to cz        \\\hline
+Pre-base Forms              & pref & ligatures   & Khmer and other similar scripts: Myanmar, Malayalam, Telugu                          \\\hline
+Pre-base Substitutions      & pres & ligatures and contextual substitution & Indic                                                                                \\\hline
+Post-base Substitutions     & psts & ligatures   & Indic (any alphabetic?)                                                              \\\hline
+Post-base Forms             & pstf & ligatures   & Khmer and Gurmukhi, Malayalam                                                        \\\hline
+Distance                    & dist & positioning of pair of glyphs  & Adjusts horizontal positioning between glyphs                                        \\\hline
+Akhand                      & akhn & ligatures  & Hindi for unbreakable, forms CCV ligatures from two consecutive CV glyphs            \\\hline
+Halant Forms                & haln & ligatures   & Uses halant forms of CV glyphs, indicating that it is read C, may include virama     \\\hline
+Half Form                   & half & ligatures  & Uses half-forms of CV glyphs, indicating that it is read as just C                   \\\hline
+Nukta Forms                 & nukt & ligatures & Add nukta (dot mark) to glyph, although this is available through Unicode characters \\\hline
+Rakar Forms                 & rkrf & ligatures   & Indic rakar                                                                          \\\hline
+Reph Form                   & rphf & ligatures & The reph diacritic changes a CV glyph to its respective rCV glyph                    \\\hline
+Vattu Variants              & vatu & ligatures  & Indic vattu                                                                          \\\hline
+Conjunct Forms              & cjct & ligatures  &                                                                                      \\\hline
+Conjunct Form After Ro      & cfar & simple substitution of one glyph with another   & Khmer                                                                                \\\hline
+\end{longtable}
+\end{center}
 \section{GPOS}
 
 GPOS or Glyph POSitioning table.
